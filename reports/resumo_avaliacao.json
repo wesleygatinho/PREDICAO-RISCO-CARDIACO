@@ -1,0 +1,242 @@
+{
+  "modelo_final": "rf",
+  "limiar": 0.29,
+  "importancia_permutacao": {
+    "ST_Slope": {
+      "media": 0.1271,
+      "dp": 0.0204
+    },
+    "ChestPainType": {
+      "media": 0.0384,
+      "dp": 0.0119
+    },
+    "Sex": {
+      "media": 0.0158,
+      "dp": 0.0052
+    },
+    "Oldpeak": {
+      "media": 0.0108,
+      "dp": 0.0074
+    },
+    "ExerciseAngina": {
+      "media": 0.0083,
+      "dp": 0.0046
+    },
+    "FastingBS": {
+      "media": 0.0068,
+      "dp": 0.0026
+    },
+    "RestingBP": {
+      "media": 0.0048,
+      "dp": 0.0026
+    },
+    "MaxHR": {
+      "media": 0.0043,
+      "dp": 0.0054
+    },
+    "Cholesterol": {
+      "media": 0.0032,
+      "dp": 0.0017
+    },
+    "RestingECG": {
+      "media": 0.0023,
+      "dp": 0.0016
+    },
+    "Age": {
+      "media": -0.0007,
+      "dp": 0.0023
+    }
+  },
+  "shap_media_abs": {
+    "ST_Slope": 0.1952,
+    "ChestPainType": 0.0988,
+    "ExerciseAngina": 0.0369,
+    "Oldpeak": 0.0347,
+    "MaxHR": 0.0338,
+    "Sex": 0.0331,
+    "FastingBS": 0.0201,
+    "Cholesterol": 0.0157,
+    "Age": 0.0149,
+    "RestingBP": 0.0101,
+    "RestingECG": 0.0066
+  },
+  "shap_valor_base": 0.5477,
+  "shap_erro_max_aditividade": 1.3322676295501878e-15,
+  "calibracao_teste": {
+    "prob_media_prevista": [
+      0.0207,
+      0.0899,
+      0.2818,
+      0.518,
+      0.6851,
+      0.8323,
+      0.9177,
+      0.9597
+    ],
+    "fracao_observada": [
+      0.0435,
+      0.087,
+      0.1304,
+      0.4783,
+      0.913,
+      0.8696,
+      0.9565,
+      0.9565
+    ]
+  },
+  "subgrupos": [
+    {
+      "subgrupo": "Todos",
+      "n": 184,
+      "positivos": 102,
+      "prevalencia": 0.5543,
+      "precisao": 0.7823,
+      "revocacao": 0.951,
+      "especificidade": 0.6707,
+      "f1": 0.8584,
+      "auc_roc": 0.923,
+      "fn": 5,
+      "fp": 27
+    },
+    {
+      "subgrupo": "Sexo = M",
+      "n": 146,
+      "positivos": 96,
+      "prevalencia": 0.6575,
+      "precisao": 0.8505,
+      "revocacao": 0.9479,
+      "especificidade": 0.68,
+      "f1": 0.8966,
+      "auc_roc": 0.9027,
+      "fn": 5,
+      "fp": 16
+    },
+    {
+      "subgrupo": "Sexo = F",
+      "n": 38,
+      "positivos": 6,
+      "prevalencia": 0.1579,
+      "precisao": 0.3529,
+      "revocacao": 1.0,
+      "especificidade": 0.6562,
+      "f1": 0.5217,
+      "auc_roc": 0.9531,
+      "fn": 0,
+      "fp": 11
+    },
+    {
+      "subgrupo": "Idade < 55",
+      "n": 109,
+      "positivos": 42,
+      "prevalencia": 0.3853,
+      "precisao": 0.65,
+      "revocacao": 0.9286,
+      "especificidade": 0.6866,
+      "f1": 0.7647,
+      "auc_roc": 0.9186,
+      "fn": 3,
+      "fp": 21
+    },
+    {
+      "subgrupo": "Idade >= 55",
+      "n": 75,
+      "positivos": 60,
+      "prevalencia": 0.8,
+      "precisao": 0.9062,
+      "revocacao": 0.9667,
+      "especificidade": 0.6,
+      "f1": 0.9355,
+      "auc_roc": 0.8711,
+      "fn": 2,
+      "fp": 6
+    },
+    {
+      "subgrupo": "Colesterol medido",
+      "n": 141,
+      "positivos": 66,
+      "prevalencia": 0.4681,
+      "precisao": 0.7381,
+      "revocacao": 0.9394,
+      "especificidade": 0.7067,
+      "f1": 0.8267,
+      "auc_roc": 0.9356,
+      "fn": 4,
+      "fp": 22
+    },
+    {
+      "subgrupo": "Colesterol não medido",
+      "n": 43,
+      "positivos": 36,
+      "prevalencia": 0.8372,
+      "precisao": 0.875,
+      "revocacao": 0.9722,
+      "especificidade": 0.2857,
+      "f1": 0.9211,
+      "auc_roc": 0.6984,
+      "fn": 1,
+      "fp": 5
+    }
+  ],
+  "perfil_erros": {
+    "VP": {
+      "n": 97,
+      "idade_media": 55.897,
+      "maxhr_media": 128.392,
+      "oldpeak_medio": 1.484,
+      "proba_media": 0.807,
+      "pct_masculino": 0.938,
+      "pct_assintomatico": 0.773,
+      "pct_angina_exercicio": 0.639,
+      "pct_st_ascendente": 0.175,
+      "pct_st_plano": 0.722,
+      "pct_glicemia_alta": 0.381,
+      "colesterol_medio_medido": 249.306,
+      "pct_colesterol_nao_medido": 0.361
+    },
+    "FN": {
+      "n": 5,
+      "idade_media": 54.0,
+      "maxhr_media": 172.4,
+      "oldpeak_medio": 1.4,
+      "proba_media": 0.15,
+      "pct_masculino": 1.0,
+      "pct_assintomatico": 0.0,
+      "pct_angina_exercicio": 0.0,
+      "pct_st_ascendente": 1.0,
+      "pct_st_plano": 0.0,
+      "pct_glicemia_alta": 0.0,
+      "colesterol_medio_medido": 238.5,
+      "pct_colesterol_nao_medido": 0.2
+    },
+    "VN": {
+      "n": 55,
+      "idade_media": 46.527,
+      "maxhr_media": 150.036,
+      "oldpeak_medio": 0.178,
+      "proba_media": 0.09,
+      "pct_masculino": 0.618,
+      "pct_assintomatico": 0.109,
+      "pct_angina_exercicio": 0.036,
+      "pct_st_ascendente": 0.982,
+      "pct_st_plano": 0.018,
+      "pct_glicemia_alta": 0.109,
+      "colesterol_medio_medido": 229.811,
+      "pct_colesterol_nao_medido": 0.036
+    },
+    "FP": {
+      "n": 27,
+      "idade_media": 49.889,
+      "maxhr_media": 145.259,
+      "oldpeak_medio": 0.7,
+      "proba_media": 0.557,
+      "pct_masculino": 0.593,
+      "pct_assintomatico": 0.444,
+      "pct_angina_exercicio": 0.259,
+      "pct_st_ascendente": 0.222,
+      "pct_st_plano": 0.556,
+      "pct_glicemia_alta": 0.111,
+      "colesterol_medio_medido": 215.364,
+      "pct_colesterol_nao_medido": 0.185
+    }
+  }
+}

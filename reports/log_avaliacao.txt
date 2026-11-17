@@ -1,0 +1,54 @@
+﻿Importância por permutação (queda de AUC):
+                 media      dp
+ST_Slope        0.1271  0.0204
+ChestPainType   0.0384  0.0119
+Sex             0.0158  0.0052
+Oldpeak         0.0108  0.0074
+ExerciseAngina  0.0083  0.0046
+FastingBS       0.0068  0.0026
+RestingBP       0.0048  0.0026
+MaxHR           0.0043  0.0054
+Cholesterol     0.0032  0.0017
+RestingECG      0.0023  0.0016
+Age            -0.0007  0.0023
+
+Média |SHAP|:
+ST_Slope          0.1952
+ChestPainType     0.0988
+ExerciseAngina    0.0369
+Oldpeak           0.0347
+MaxHR             0.0338
+Sex               0.0331
+FastingBS         0.0201
+Cholesterol       0.0157
+Age               0.0149
+RestingBP         0.0101
+RestingECG        0.0066
+
+Erro máximo de aditividade do SHAP: 1.33e-15
+
+Subgrupos (teste):
+             subgrupo   n  positivos  prevalencia  precisao  revocacao  especificidade    f1  auc_roc  fn  fp
+                Todos 184        102        0.554     0.782      0.951           0.671 0.858    0.923   5  27
+             Sexo = M 146         96        0.658     0.850      0.948           0.680 0.897    0.903   5  16
+             Sexo = F  38          6        0.158     0.353      1.000           0.656 0.522    0.953   0  11
+           Idade < 55 109         42        0.385     0.650      0.929           0.687 0.765    0.919   3  21
+          Idade >= 55  75         60        0.800     0.906      0.967           0.600 0.935    0.871   2   6
+    Colesterol medido 141         66        0.468     0.738      0.939           0.707 0.827    0.936   4  22
+Colesterol não medido  43         36        0.837     0.875      0.972           0.286 0.921    0.698   1   5
+
+Perfil dos erros (teste):
+grupo                          VP      FN      VN      FP
+n                           97.00    5.00   55.00   27.00
+idade_media                 55.90   54.00   46.53   49.89
+maxhr_media                128.39  172.40  150.04  145.26
+oldpeak_medio                1.48    1.40    0.18    0.70
+proba_media                  0.81    0.15    0.09    0.56
+pct_masculino                0.94    1.00    0.62    0.59
+pct_assintomatico            0.77    0.00    0.11    0.44
+pct_angina_exercicio         0.64    0.00    0.04    0.26
+pct_st_ascendente            0.18    1.00    0.98    0.22
+pct_st_plano                 0.72    0.00    0.02    0.56
+pct_glicemia_alta            0.38    0.00    0.11    0.11
+colesterol_medio_medido    249.31  238.50  229.81  215.36
+pct_colesterol_nao_medido    0.36    0.20    0.04    0.19

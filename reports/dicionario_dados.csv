@@ -1,0 +1,13 @@
+coluna,descricao,tipo,valores,pct_ausente_explicito,observacao
+Age,Idade,numérica,28 a 77 anos,0.0,
+Sex,Sexo,categórica nominal,"M (Masculino), F (Feminino)",0.0,
+ChestPainType,Tipo de dor no peito,categórica nominal,"ASY (Assintomático), ATA (Angina atípica), NAP (Dor não anginosa), TA (Angina típica)",0.0,
+RestingBP,Pressão arterial em repouso,numérica,0 a 200 mm Hg,0.0,1 zeros = não medido (0.1%)
+Cholesterol,Colesterol sérico,numérica,0 a 603 mg/dl,0.0,172 zeros = não medido (18.7%)
+FastingBS,Glicemia de jejum > 120 mg/dl,binária,"0, 1",0.0,
+RestingECG,ECG em repouso,categórica nominal,"Normal (Normal), ST (Anormalidade de onda ST-T), LVH (Hipertrofia ventricular esquerda)",0.0,
+MaxHR,Frequência cardíaca máxima,numérica,60 a 202 bpm,0.0,
+ExerciseAngina,Angina induzida por exercício,categórica nominal,"N (Não), Y (Sim)",0.0,
+Oldpeak,Depressão de ST (oldpeak),numérica,-2.6 a 6.2 mm,0.0,
+ST_Slope,Inclinação do segmento ST,categórica nominal,"Up (Ascendente), Flat (Plano), Down (Descendente)",0.0,
+HeartDisease,Doença cardíaca,binária,"0, 1",0.0,alvo

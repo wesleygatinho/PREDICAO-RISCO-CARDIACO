@@ -1,0 +1,16 @@
+# Dependências do projeto (treino + aplicação + testes). Requer Python 3.11 ou mais novo.
+# Versões fixadas: o modelo salvo em models/ foi gerado com scikit-learn 1.8.0 e
+# deve ser carregado com a mesma versão.
+numpy==2.4.6
+pandas==3.1.1
+scikit-learn==1.8.0
+scipy==1.17.1
+joblib==1.6.0
+matplotlib==3.11.2
+shap==0.51.0
+streamlit==1.67.0
+pytest==9.2.0
+
+# Opcionais (não necessários para treinar nem para usar a aplicação):
+#   notebook da análise exploratória ... pip install jupyter
+#   capturas de tela do artigo ......... pip install playwright

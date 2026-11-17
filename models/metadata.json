@@ -1,0 +1,100 @@
+{
+  "modelo": "rf",
+  "rotulo": "Random Forest",
+  "familia": "Ensemble (bagging)",
+  "hiperparametros": {
+    "max_depth": 8,
+    "max_features": "sqrt",
+    "min_samples_leaf": 4,
+    "n_estimators": 600
+  },
+  "limiar": 0.29,
+  "criterio_limiar": "máximo F2 nas predições out-of-fold do treino",
+  "criterio_selecao": "maior AUC-ROC média na validação cruzada estratificada 5x3",
+  "atributos": [
+    "Age",
+    "Sex",
+    "ChestPainType",
+    "RestingBP",
+    "Cholesterol",
+    "FastingBS",
+    "RestingECG",
+    "MaxHR",
+    "ExerciseAngina",
+    "Oldpeak",
+    "ST_Slope"
+  ],
+  "alvo": "HeartDisease",
+  "semente": 42,
+  "n_treino": 734,
+  "n_teste": 184,
+  "prevalencia_treino": 0.553133514986376,
+  "metricas_teste_limiar_escolhido": {
+    "limiar": 0.29,
+    "acuracia": 0.8260869565217391,
+    "precisao": 0.782258064516129,
+    "revocacao": 0.9509803921568627,
+    "especificidade": 0.6707317073170732,
+    "f1": 0.8584070796460177,
+    "f2": 0.9116541353383458,
+    "auc_roc": 0.9230033476805355,
+    "brier": 0.10709599754489504,
+    "vn": 55,
+    "fp": 27,
+    "fn": 5,
+    "vp": 97
+  },
+  "metricas_teste_limiar_050": {
+    "limiar": 0.5,
+    "acuracia": 0.8478260869565217,
+    "precisao": 0.8490566037735849,
+    "revocacao": 0.8823529411764706,
+    "especificidade": 0.8048780487804879,
+    "f1": 0.8653846153846154,
+    "f2": 0.8754863813229572,
+    "auc_roc": 0.9230033476805355,
+    "brier": 0.10709599754489504,
+    "vn": 66,
+    "fp": 16,
+    "fn": 12,
+    "vp": 90
+  },
+  "ic95_teste_limiar_escolhido": {
+    "acuracia": [
+      0.7717391304347826,
+      0.8804347826086957
+    ],
+    "precisao": [
+      0.7076829268292684,
+      0.8536632270168855
+    ],
+    "revocacao": [
+      0.9072164948453608,
+      0.99
+    ],
+    "especificidade": [
+      0.5646907993966818,
+      0.775
+    ],
+    "f1": [
+      0.8073394495412844,
+      0.9043478260869565
+    ],
+    "f2": [
+      0.8718461081827521,
+      0.9464672401707348
+    ],
+    "auc_roc": [
+      0.8794105226855548,
+      0.9594783489166442
+    ]
+  },
+  "treinado_em": "2026-11-14T17:22:39Z",
+  "dataset_sha256": "948420b084d8a3a0ca42b8419fce9aee175879e43f8aedf712377899a67aa49b",
+  "versoes": {
+    "python": "3.11.9",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1"
+  }
+}

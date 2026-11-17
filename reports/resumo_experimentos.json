@@ -1,0 +1,444 @@
+{
+  "protocolo": {
+    "semente": 42,
+    "teste": 0.2,
+    "cv": "5 dobras x 3 repetições",
+    "metrica_selecao": "roc_auc",
+    "n_treino": 734,
+    "n_teste": 184,
+    "positivos_treino": 406,
+    "positivos_teste": 102
+  },
+  "melhores_hiperparametros": {
+    "dummy": {},
+    "logreg": {
+      "C": 1,
+      "class_weight": "balanced"
+    },
+    "knn": {
+      "n_neighbors": 41,
+      "p": 1,
+      "weights": "distance"
+    },
+    "svm": {
+      "C": 100,
+      "class_weight": "balanced",
+      "gamma": 0.003
+    },
+    "rf": {
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "min_samples_leaf": 4,
+      "n_estimators": 600
+    },
+    "gb": {
+      "learning_rate": 0.01,
+      "max_depth": 3,
+      "n_estimators": 400,
+      "subsample": 0.7
+    },
+    "mlp": {
+      "alpha": 1.0,
+      "hidden_layer_sizes": [
+        8
+      ],
+      "learning_rate_init": 0.001
+    }
+  },
+  "cv": [
+    {
+      "modelo": "dummy",
+      "rotulo": "Classe majoritária",
+      "familia": "Baseline trivial",
+      "n_configuracoes": 1,
+      "accuracy_media": 0.5531357748578883,
+      "accuracy_dp": 0.0027621389261090925,
+      "precision_media": 0.5531357748578883,
+      "precision_dp": 0.0027621389261090925,
+      "recall_media": 1.0,
+      "recall_dp": 0.0,
+      "f1_media": 0.7122785080547589,
+      "f1_dp": 0.0022870669986072923,
+      "roc_auc_media": 0.5,
+      "roc_auc_dp": 0.0,
+      "roc_auc_treino_media": 0.5
+    },
+    {
+      "modelo": "logreg",
+      "rotulo": "Regressão logística",
+      "familia": "Baseline linear",
+      "n_configuracoes": 16,
+      "accuracy_media": 0.8383313142608643,
+      "accuracy_dp": 0.02500560458960409,
+      "precision_media": 0.8626299535387211,
+      "precision_dp": 0.034905696757141925,
+      "recall_media": 0.8439225132992071,
+      "recall_dp": 0.03006890840726317,
+      "f1_media": 0.8524563502033154,
+      "f1_dp": 0.02179369526214281,
+      "roc_auc_media": 0.9198509403206783,
+      "roc_auc_dp": 0.026511725606524053,
+      "roc_auc_treino_media": 0.9293263885828118
+    },
+    {
+      "modelo": "knn",
+      "rotulo": "k-NN",
+      "familia": "Baseado em instâncias",
+      "n_configuracoes": 36,
+      "accuracy_media": 0.854673376199795,
+      "accuracy_dp": 0.03043496046198581,
+      "precision_media": 0.8566301008116181,
+      "precision_dp": 0.04445748161873896,
+      "recall_media": 0.8891498544615075,
+      "recall_dp": 0.018039933336317704,
+      "f1_media": 0.8718127919033247,
+      "f1_dp": 0.023538509575245583,
+      "roc_auc_media": 0.9222165391903422,
+      "roc_auc_dp": 0.02932114816273845,
+      "roc_auc_treino_media": 1.0
+    },
+    {
+      "modelo": "svm",
+      "rotulo": "SVM (RBF)",
+      "familia": "Máquina de vetores de suporte",
+      "n_configuracoes": 84,
+      "accuracy_media": 0.8455875500885287,
+      "accuracy_dp": 0.021523063489694808,
+      "precision_media": 0.8651036038778704,
+      "precision_dp": 0.033379344819940523,
+      "recall_media": 0.8563083408611865,
+      "recall_dp": 0.02910169981140067,
+      "f1_media": 0.8599200226450922,
+      "f1_dp": 0.018590191891049126,
+      "roc_auc_media": 0.9222510468219591,
+      "roc_auc_dp": 0.02669146852252274,
+      "roc_auc_treino_media": 0.936802027052797
+    },
+    {
+      "modelo": "rf",
+      "rotulo": "Random Forest",
+      "familia": "Ensemble (bagging)",
+      "n_configuracoes": 80,
+      "accuracy_media": 0.8583108129096388,
+      "accuracy_dp": 0.029522501056607885,
+      "precision_media": 0.8531312297061835,
+      "precision_dp": 0.03915581831813399,
+      "recall_media": 0.9014854963364448,
+      "recall_dp": 0.02909681134587133,
+      "f1_media": 0.8758642924054054,
+      "f1_dp": 0.02406128698630095,
+      "roc_auc_media": 0.9296941948613131,
+      "roc_auc_dp": 0.024334720402049956,
+      "roc_auc_treino_media": 0.978583381095112
+    },
+    {
+      "modelo": "gb",
+      "rotulo": "Gradient Boosting",
+      "familia": "Ensemble (boosting)",
+      "n_configuracoes": 54,
+      "accuracy_media": 0.8528655297735532,
+      "accuracy_dp": 0.0262517623437683,
+      "precision_media": 0.8579606175042431,
+      "precision_dp": 0.03790825506425022,
+      "recall_media": 0.8825554551841817,
+      "recall_dp": 0.03403302173197718,
+      "f1_media": 0.8691153395052306,
+      "f1_dp": 0.022179769362563585,
+      "roc_auc_media": 0.9279789112490107,
+      "roc_auc_dp": 0.02430085769805035,
+      "roc_auc_treino_media": 0.976618816884809
+    },
+    {
+      "modelo": "mlp",
+      "rotulo": "MLP",
+      "familia": "Rede neural",
+      "n_configuracoes": 32,
+      "accuracy_media": 0.847858230050011,
+      "accuracy_dp": 0.030844691452226302,
+      "precision_media": 0.8491174732727412,
+      "precision_dp": 0.03811952303488803,
+      "recall_media": 0.8841915085817525,
+      "recall_dp": 0.03401386688821938,
+      "f1_media": 0.8655237210375335,
+      "f1_dp": 0.02610092387289087,
+      "roc_auc_media": 0.9267747916709074,
+      "roc_auc_dp": 0.023705718758226177,
+      "roc_auc_treino_media": 0.9484091985901083
+    }
+  ],
+  "teste_limiar_050": [
+    {
+      "modelo": "dummy",
+      "rotulo": "Classe majoritária",
+      "limiar": 0.5,
+      "acuracia": 0.5543478260869565,
+      "precisao": 0.5543478260869565,
+      "revocacao": 1.0,
+      "especificidade": 0.0,
+      "f1": 0.7132867132867133,
+      "f2": 0.8614864864864865,
+      "auc_roc": 0.5,
+      "brier": 0.44565217391304346,
+      "vn": 0,
+      "fp": 82,
+      "fn": 0,
+      "vp": 102
+    },
+    {
+      "modelo": "logreg",
+      "rotulo": "Regressão logística",
+      "limiar": 0.5,
+      "acuracia": 0.875,
+      "precisao": 0.898989898989899,
+      "revocacao": 0.8725490196078431,
+      "especificidade": 0.8780487804878049,
+      "f1": 0.8855721393034826,
+      "f2": 0.8777120315581854,
+      "auc_roc": 0.9314921090387374,
+      "brier": 0.10019261399439053,
+      "vn": 72,
+      "fp": 10,
+      "fn": 13,
+      "vp": 89
+    },
+    {
+      "modelo": "knn",
+      "rotulo": "k-NN",
+      "limiar": 0.5,
+      "acuracia": 0.8913043478260869,
+      "precisao": 0.9019607843137255,
+      "revocacao": 0.9019607843137255,
+      "especificidade": 0.8780487804878049,
+      "f1": 0.9019607843137255,
+      "f2": 0.9019607843137255,
+      "auc_roc": 0.9383070301291249,
+      "brier": 0.09406452944067879,
+      "vn": 72,
+      "fp": 10,
+      "fn": 10,
+      "vp": 92
+    },
+    {
+      "modelo": "svm",
+      "rotulo": "SVM (RBF)",
+      "limiar": 0.5,
+      "acuracia": 0.8804347826086957,
+      "precisao": 0.8846153846153846,
+      "revocacao": 0.9019607843137255,
+      "especificidade": 0.8536585365853658,
+      "f1": 0.8932038834951457,
+      "f2": 0.8984375,
+      "auc_roc": 0.9359158297465326,
+      "brier": 0.09599104469203802,
+      "vn": 70,
+      "fp": 12,
+      "fn": 10,
+      "vp": 92
+    },
+    {
+      "modelo": "rf",
+      "rotulo": "Random Forest",
+      "limiar": 0.5,
+      "acuracia": 0.8478260869565217,
+      "precisao": 0.8490566037735849,
+      "revocacao": 0.8823529411764706,
+      "especificidade": 0.8048780487804879,
+      "f1": 0.8653846153846154,
+      "f2": 0.8754863813229572,
+      "auc_roc": 0.9230033476805355,
+      "brier": 0.10709599754489504,
+      "vn": 66,
+      "fp": 16,
+      "fn": 12,
+      "vp": 90
+    },
+    {
+      "modelo": "gb",
+      "rotulo": "Gradient Boosting",
+      "limiar": 0.5,
+      "acuracia": 0.8913043478260869,
+      "precisao": 0.9019607843137255,
+      "revocacao": 0.9019607843137255,
+      "especificidade": 0.8780487804878049,
+      "f1": 0.9019607843137255,
+      "f2": 0.9019607843137255,
+      "auc_roc": 0.9313725490196079,
+      "brier": 0.09495193241072171,
+      "vn": 72,
+      "fp": 10,
+      "fn": 10,
+      "vp": 92
+    },
+    {
+      "modelo": "mlp",
+      "rotulo": "MLP",
+      "limiar": 0.5,
+      "acuracia": 0.8695652173913043,
+      "precisao": 0.875,
+      "revocacao": 0.8921568627450981,
+      "especificidade": 0.8414634146341463,
+      "f1": 0.883495145631068,
+      "f2": 0.888671875,
+      "auc_roc": 0.930416068866571,
+      "brier": 0.09999125252786432,
+      "vn": 69,
+      "fp": 13,
+      "fn": 11,
+      "vp": 91
+    }
+  ],
+  "modelo_final": "rf",
+  "comparacao_auc_cv_final_vs_outros": {
+    "dummy": {
+      "diferenca_media_auc": 0.42969419486131316,
+      "t": 30.39622747096964,
+      "p_valor": 3.480837379002227e-14
+    },
+    "logreg": {
+      "diferenca_media_auc": 0.009843254540634868,
+      "t": 2.1102269167802095,
+      "p_valor": 0.05331409589878249
+    },
+    "knn": {
+      "diferenca_media_auc": 0.00747765567097094,
+      "t": 1.301230660402337,
+      "p_valor": 0.2141875909081275
+    },
+    "svm": {
+      "diferenca_media_auc": 0.007443148039353998,
+      "t": 1.453537137531799,
+      "p_valor": 0.16812220776680714
+    },
+    "gb": {
+      "diferenca_media_auc": 0.001715283612302613,
+      "t": 0.4524680286268244,
+      "p_valor": 0.6578638193781324
+    },
+    "mlp": {
+      "diferenca_media_auc": 0.0029194031904058964,
+      "t": 0.6209855327540326,
+      "p_valor": 0.5445875165973265
+    }
+  },
+  "limiar": 0.29,
+  "oof_treino_limiar_escolhido": {
+    "limiar": 0.29,
+    "acuracia": 0.8487738419618529,
+    "precisao": 0.7955911823647295,
+    "revocacao": 0.9778325123152709,
+    "especificidade": 0.6890243902439024,
+    "f1": 0.8773480662983425,
+    "f2": 0.9349976448422044,
+    "auc_roc": 0.9292923224798749,
+    "brier": 0.10305513045881225,
+    "vn": 226,
+    "fp": 102,
+    "fn": 9,
+    "vp": 397
+  },
+  "final_teste_limiar_050": {
+    "limiar": 0.5,
+    "acuracia": 0.8478260869565217,
+    "precisao": 0.8490566037735849,
+    "revocacao": 0.8823529411764706,
+    "especificidade": 0.8048780487804879,
+    "f1": 0.8653846153846154,
+    "f2": 0.8754863813229572,
+    "auc_roc": 0.9230033476805355,
+    "brier": 0.10709599754489504,
+    "vn": 66,
+    "fp": 16,
+    "fn": 12,
+    "vp": 90
+  },
+  "final_teste_limiar_escolhido": {
+    "limiar": 0.29,
+    "acuracia": 0.8260869565217391,
+    "precisao": 0.782258064516129,
+    "revocacao": 0.9509803921568627,
+    "especificidade": 0.6707317073170732,
+    "f1": 0.8584070796460177,
+    "f2": 0.9116541353383458,
+    "auc_roc": 0.9230033476805355,
+    "brier": 0.10709599754489504,
+    "vn": 55,
+    "fp": 27,
+    "fn": 5,
+    "vp": 97
+  },
+  "final_teste_ic95_limiar_escolhido": {
+    "acuracia": [
+      0.7717391304347826,
+      0.8804347826086957
+    ],
+    "precisao": [
+      0.7076829268292684,
+      0.8536632270168855
+    ],
+    "revocacao": [
+      0.9072164948453608,
+      0.99
+    ],
+    "especificidade": [
+      0.5646907993966818,
+      0.775
+    ],
+    "f1": [
+      0.8073394495412844,
+      0.9043478260869565
+    ],
+    "f2": [
+      0.8718461081827521,
+      0.9464672401707348
+    ],
+    "auc_roc": [
+      0.8794105226855548,
+      0.9594783489166442
+    ]
+  },
+  "final_teste_ic95_limiar_050": {
+    "acuracia": [
+      0.7934782608695652,
+      0.8967391304347826
+    ],
+    "precisao": [
+      0.7744866814650389,
+      0.9143059299191373
+    ],
+    "revocacao": [
+      0.8151977812640071,
+      0.941747572815534
+    ],
+    "especificidade": [
+      0.7108433734939759,
+      0.8875
+    ],
+    "f1": [
+      0.8102564102564103,
+      0.9116405565826603
+    ],
+    "f2": [
+      0.817664705966437,
+      0.9252344763361825
+    ],
+    "auc_roc": [
+      0.8794105226855548,
+      0.9594783489166442
+    ]
+  },
+  "sensibilidade_indicador_ausencia": {
+    "logreg": {
+      "auc_sem_indicador_media": 0.9198509403206783,
+      "auc_sem_indicador_dp": 0.026511725606524053,
+      "auc_com_indicador_media": 0.9264292567815602,
+      "auc_com_indicador_dp": 0.02885279367535849
+    },
+    "rf": {
+      "auc_sem_indicador_media": 0.9296941948613131,
+      "auc_sem_indicador_dp": 0.024334720402049956,
+      "auc_com_indicador_media": 0.9318723285480285,
+      "auc_com_indicador_dp": 0.024229379915403925
+    }
+  },
+  "tempo_total_s": 243.8
+}

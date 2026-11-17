@@ -1,0 +1,201 @@
+{
+  "n_linhas": 918,
+  "n_colunas": 12,
+  "tipos": {
+    "Age": "int64",
+    "Sex": "str",
+    "ChestPainType": "str",
+    "RestingBP": "int64",
+    "Cholesterol": "int64",
+    "FastingBS": "int64",
+    "RestingECG": "str",
+    "MaxHR": "int64",
+    "ExerciseAngina": "str",
+    "Oldpeak": "float64",
+    "ST_Slope": "str",
+    "HeartDisease": "int64"
+  },
+  "ausentes_explicitos": {
+    "Age": 0,
+    "Sex": 0,
+    "ChestPainType": 0,
+    "RestingBP": 0,
+    "Cholesterol": 0,
+    "FastingBS": 0,
+    "RestingECG": 0,
+    "MaxHR": 0,
+    "ExerciseAngina": 0,
+    "Oldpeak": 0,
+    "ST_Slope": 0,
+    "HeartDisease": 0
+  },
+  "linhas_duplicadas": 0,
+  "zeros_impossiveis": {
+    "RestingBP": 1,
+    "Cholesterol": 172
+  },
+  "oldpeak_negativo": 13,
+  "outliers_iqr": {
+    "Age": 0,
+    "RestingBP": 28,
+    "Cholesterol": 183,
+    "MaxHR": 2,
+    "Oldpeak": 16
+  },
+  "outliers_iqr_colesterol_sem_zeros": 23,
+  "descritivas": {
+    "Age": {
+      "count": 918.0,
+      "mean": 53.51,
+      "std": 9.43,
+      "min": 28.0,
+      "25%": 47.0,
+      "50%": 54.0,
+      "75%": 60.0,
+      "max": 77.0
+    },
+    "RestingBP": {
+      "count": 918.0,
+      "mean": 132.4,
+      "std": 18.51,
+      "min": 0.0,
+      "25%": 120.0,
+      "50%": 130.0,
+      "75%": 140.0,
+      "max": 200.0
+    },
+    "Cholesterol": {
+      "count": 918.0,
+      "mean": 198.8,
+      "std": 109.38,
+      "min": 0.0,
+      "25%": 173.25,
+      "50%": 223.0,
+      "75%": 267.0,
+      "max": 603.0
+    },
+    "MaxHR": {
+      "count": 918.0,
+      "mean": 136.81,
+      "std": 25.46,
+      "min": 60.0,
+      "25%": 120.0,
+      "50%": 138.0,
+      "75%": 156.0,
+      "max": 202.0
+    },
+    "Oldpeak": {
+      "count": 918.0,
+      "mean": 0.89,
+      "std": 1.07,
+      "min": -2.6,
+      "25%": 0.0,
+      "50%": 0.6,
+      "75%": 1.5,
+      "max": 6.2
+    }
+  },
+  "alvo_contagem": {
+    "1": 508,
+    "0": 410
+  },
+  "alvo_proporcao": {
+    "1": 0.5534,
+    "0": 0.4466
+  },
+  "sexo_contagem": {
+    "M": 725,
+    "F": 193
+  },
+  "prevalencia_colesterol_zero": 0.8837,
+  "prevalencia_colesterol_medido": 0.4772,
+  "n_treino": 734,
+  "n_teste": 184,
+  "prevalencia_por_categoria_treino": {
+    "Sex": {
+      "F": {
+        "n": 155,
+        "prevalencia": 0.2839
+      },
+      "M": {
+        "n": 579,
+        "prevalencia": 0.6252
+      }
+    },
+    "ChestPainType": {
+      "ASY": {
+        "n": 403,
+        "prevalencia": 0.7866
+      },
+      "ATA": {
+        "n": 136,
+        "prevalencia": 0.1397
+      },
+      "NAP": {
+        "n": 155,
+        "prevalencia": 0.3355
+      },
+      "TA": {
+        "n": 40,
+        "prevalencia": 0.45
+      }
+    },
+    "RestingECG": {
+      "LVH": {
+        "n": 146,
+        "prevalencia": 0.5753
+      },
+      "Normal": {
+        "n": 447,
+        "prevalencia": 0.5123
+      },
+      "ST": {
+        "n": 141,
+        "prevalencia": 0.6596
+      }
+    },
+    "ExerciseAngina": {
+      "N": {
+        "n": 434,
+        "prevalencia": 0.3502
+      },
+      "Y": {
+        "n": 300,
+        "prevalencia": 0.8467
+      }
+    },
+    "ST_Slope": {
+      "Down": {
+        "n": 47,
+        "prevalencia": 0.8298
+      },
+      "Flat": {
+        "n": 374,
+        "prevalencia": 0.8316
+      },
+      "Up": {
+        "n": 313,
+        "prevalencia": 0.1789
+      }
+    },
+    "FastingBS": {
+      "0": {
+        "n": 566,
+        "prevalencia": 0.4823
+      },
+      "1": {
+        "n": 168,
+        "prevalencia": 0.7917
+      }
+    }
+  },
+  "correlacao_spearman_com_alvo_treino": {
+    "Age": 0.255,
+    "RestingBP": 0.107,
+    "Cholesterol": 0.101,
+    "MaxHR": -0.411,
+    "Oldpeak": 0.392,
+    "FastingBS": 0.261
+  },
+  "maior_correlacao_entre_atributos_treino": 0.379
+}
